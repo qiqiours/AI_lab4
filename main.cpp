@@ -4,7 +4,7 @@
 // /* to // and */ to // to make a program active
 
 // PROGRAM #1
-//
+/*
 // This controls two digital out lines connected to LEDs
 // and two others that go outon pins 21 and 22
 // The program alternates these lines with a 2 second delay;
@@ -25,7 +25,7 @@ int main(void){
     wait(2.);  // wait 2 seconds. Use wait_ms or wait_us using integers of milli or micro seconds
   }
 }
-//
+*/
 
 // PROGRAM #2
 /*
@@ -83,3 +83,20 @@ int main(void){
     }
  }
 */
+
+
+
+// PROGRAM #5
+
+// This program reads an analog voltage and 
+// echoes it outon the analog output line
+AnalogOut aout(p18);
+AnalogIn ain(p20);
+float volts;
+float VCC = 3.292;
+int main(void){
+    while(1){
+        volts = VCC*ain;
+        aout = volts/VCC;
+    }
+ }
