@@ -6,7 +6,7 @@
 // PROGRAM #1
 //
 // This controls two digital out lines connected to LEDs
-// and two others that go outon pins 21 and 22
+// and two others that go out on pins 21 and 22
 // The program alternates these lines with a 2 second delay;
 DigitalOut led1(LED1);  // Controls LED1
 DigitalOut led2(LED2);  // Controls LED2
@@ -19,10 +19,10 @@ int main(void){
   while(1){
     led1 = valOut;
     d1 = valOut;
-    led2 = !valOut
+    led2 = !valOut;
     d2 = !valOut;
     valOut = !valOut;
-    wait(2.);  // wait 2 seconds. Use wait_ms or wait_us using integers of milli or micro seconds
+    Thread:wait(2.);  // wait 2 seconds. Use wait_ms or wait_us using integers of milli or micro seconds
   }
 }
 //
